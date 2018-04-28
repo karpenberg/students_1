@@ -17,7 +17,7 @@
         };
     }
 
-       absent() {
+    absent() {
         if (this.absence.length > this.absenceIndex) {
             this.absence[this.absenceIndex] = false;
             this.absenceIndex++;
@@ -31,12 +31,12 @@
         }
     };
 
-    get avaragePresence(){
+    get avaragePresence() {
         var precenceCount = this.absence.slice(0, this.absenceIndex).filter(x => x).length;
         return precenceCount / this.absenceIndex;
     }
 
-    get avarageMark(){
+    get avarageMark() {
         return this.avarageMark;
     }
 
@@ -52,14 +52,13 @@
     }
 
     summary() {
-        
         if (this.averageMark < this.goodMarksMin && this.avaragePresence < this.presenceFactor) {
             console.log(this.results.BAD);
         } else if (this.averageMark < this.goodMarksMin || this.avaragePresence < this.presenceFactor)
             console.log(this.results.NORMAL);
         else
             console.log(this.results.GOOD);
-    }   
+    }
 }
 
 
