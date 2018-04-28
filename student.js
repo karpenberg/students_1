@@ -34,11 +34,7 @@
     get avaragePresence() {
         var precenceCount = this.absence.slice(0, this.absenceIndex).filter(x => x).length;
         return precenceCount / this.absenceIndex;
-    }
-
-    get avarageMark() {
-        return this.avarageMark;
-    }
+    }    
 
     getAge(dateString) {
         var today = new Date();
